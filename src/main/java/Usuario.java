@@ -2,11 +2,13 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 public class Usuario {
     private String nome, email, senha;
-    public Usuario(String nome, String email, String senha){
+    public Usuario(String nome, String email, String senha) throws Exception {
         if(emailIsValid(email) && passwordIsValid(senha)) {
             this.email = email;
             this.senha = senha;
             this.nome = nome;
+        } else {
+            throw new Exception("Erro ao cadastrar");
         }
     }
 

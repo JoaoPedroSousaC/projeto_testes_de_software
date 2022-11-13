@@ -4,7 +4,7 @@ import java.util.List;
 public class Sistema implements FuncionalidadesIF {
 
   //Falta restringir o cadastro para verificar se está sendo passado dados permitidos
-  public Usuario cadastraUsuario(String nome, String email, String senha){
+  public Usuario cadastraUsuario(String nome, String email, String senha) throws Exception {
     Usuario usuario = new Usuario(nome,email,senha);
     return usuario;
   }

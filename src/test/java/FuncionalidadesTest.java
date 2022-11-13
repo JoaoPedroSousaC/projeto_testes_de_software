@@ -3,7 +3,7 @@ import org.junit.Test;
 import java.*;
 public class FuncionalidadesTest {
     @Test
-    public void novoUsuarioTest(){
+    public void novoUsuarioTest() throws Exception {
         Usuario jvt = new Usuario("Juvito","jvsdf@dale.com","Abcdef@1");
         Usuario joao = new Usuario("joao","joao@com","Abcdef@1");
         Usuario isaac = new Usuario("isaac","joao@teste.com","senhainvalida");
@@ -15,7 +15,7 @@ public class FuncionalidadesTest {
 
     //falta testar
     @Test
-    public void cadastroTest(){
+    public void cadastroTest() throws Exception {
         Sistema cadastro =  new Sistema();
         cadastro.cadastraUsuario("Juvito","jvsdf@dale.com","Abcdef@1");
     }
