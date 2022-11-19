@@ -22,7 +22,7 @@ public class FuncionalidadesTest {
 
     //ta testado meio errado, pq ta retornando a memoria
     @Test
-    public void testarRaizesTest(){
+    public void testarRaizesTest() throws Exception {
         Sistema sistema = new Sistema();
         sistema.calculaFuncaoSegundoGrau(-2,1,6);
         sistema.calculaFuncaoSegundoGrau(2,2,2);

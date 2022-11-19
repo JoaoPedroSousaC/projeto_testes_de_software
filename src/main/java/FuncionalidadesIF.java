@@ -1,6 +1,6 @@
 public interface FuncionalidadesIF {
   public Usuario cadastraUsuario(String nome, String email, String senha) throws Exception;
-  public Raizes calculaFuncaoSegundoGrau(double a, double b, double c);
+  public String calculaFuncaoSegundoGrau(double a, double b, double c) throws Exception;
   public boolean ehTriangulo(double angulo1, double angulo2, double angulo3);
   public boolean ehTrianguloRetangulo(double lado1, double lado2, double lado3);
   public String classificaTriangulo(double angulo1, double angulo2, double angulo3);

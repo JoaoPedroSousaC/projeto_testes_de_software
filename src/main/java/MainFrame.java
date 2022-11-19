@@ -17,6 +17,8 @@ public class MainFrame extends JFrame{
     private JLabel senhaText;
     private JLabel emailText;
     private JLabel nomeText;
+    private JLabel cadastroText;
+    private JLabel senhaInfoText;
 
     private static boolean emailIsValid(String emailAddress) {
         String regexPattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
@@ -71,7 +73,7 @@ public class MainFrame extends JFrame{
                     try {
                         Usuario usuario = new Usuario(name, email, password);
                         setVisible(false);
-                        new SistemaFrame().setVisible(true);
+                        new SistemaFrame(name).setVisible(true);
                     } catch (Exception ex) {
                         System.out.println(ex.getMessage());
                     }

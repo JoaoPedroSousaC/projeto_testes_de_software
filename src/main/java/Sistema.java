@@ -7,14 +7,21 @@ public class Sistema implements FuncionalidadesIF {
   // Falta restringir o cadastro para verificar se está sendo passado dados
   // permitidos
   public Usuario cadastraUsuario(String nome, String email, String senha) throws Exception {
-    Usuario usuario = new Usuario(nome, email, senha);
-    return usuario;
+      Usuario usuario = new Usuario(nome,email,senha);
+      if (usuario.sucessoNaCriacaoDeUsuario()) {
+        return usuario;
+      } else {
+        throw new Exception("Erro ao cadastrar usuário");
+      }
   }
 
-  public Raizes calculaFuncaoSegundoGrau(double a, double b, double c) {
-    Raizes raizes = new Raizes(a, b, c);
-    System.out.println(raizes.getRaizes());
-    return raizes;
+  public String calculaFuncaoSegundoGrau(double a, double b, double c) throws Exception {
+    try {
+      Raizes raizes = new Raizes(a,b,c);
+      return (raizes.getRaizes());
+    } catch (Exception ex) {
+      return ex.getMessage();
+    }
   }
 
   public boolean ehTriangulo(double angulo1, double angulo2, double angulo3) {

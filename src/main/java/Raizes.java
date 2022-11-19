@@ -2,11 +2,13 @@ import java.math.BigDecimal;
 public class Raizes {
     private double a,b,c;
 
-    public Raizes(double a, double b, double c){
+    public Raizes(double a, double b, double c) throws Exception {
         if(ehFuncaoQuadratica(a)){
             this.a = a;
             this.b = b;
             this.c = c;
+        } else {
+            throw  new Exception("error");
         }
     }
     private boolean ehFuncaoQuadratica(double number_A){

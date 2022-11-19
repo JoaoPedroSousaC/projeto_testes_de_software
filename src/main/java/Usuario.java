@@ -3,6 +3,7 @@ import java.util.regex.Matcher;
 public class Usuario {
     private String nome, email, senha;
     public Usuario(String nome, String email, String senha) throws Exception {
+        this.nome = null;
         if(emailIsValid(email) && passwordIsValid(senha)) {
             this.email = email;
             this.senha = senha;
