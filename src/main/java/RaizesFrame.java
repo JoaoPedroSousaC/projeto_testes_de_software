@@ -31,6 +31,10 @@ public class RaizesFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 sistema.setVisible(true);
                 setVisible(false);
+                resultadoText.setText("Resultado ira aparecer aqui...");
+                valorAInput.setText("");
+                valorBInput.setText("");
+                valorCInput.setText("");
             }
         });
         calcularButton.addActionListener(new ActionListener() {
@@ -54,10 +58,10 @@ public class RaizesFrame extends JFrame {
                         resultadoText.setText("Valor inválido");
                     }
                 } catch (Exception ex) {
-                    resultadoText.setText("Preencha os campos");
+                    resultadoText.setText("Preencha os campos corretamente!!!");
                 }
 
-                resultadoText.setSize(200,30);
+                resultadoText.setSize(350,30);
 
             }
         });

@@ -3,8 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class EhTrianguloFrame extends JFrame{
-    private JPanel ehTrianguloFrame;
+public class ClassificarTrianguloFrame extends JFrame{
     private JButton voltarButton;
     private JTextField valorAInput;
     private JTextField valorBInput;
@@ -17,9 +16,10 @@ public class EhTrianguloFrame extends JFrame{
     private JLabel valorBText;
     private JLabel valorCText;
     private JLabel errorBText;
+    private JPanel classificarTrianguloFrame;
 
-    public EhTrianguloFrame (JFrame sistema) {
-        setContentPane(ehTrianguloFrame);
+    public ClassificarTrianguloFrame (JFrame sistema) {
+        setContentPane(classificarTrianguloFrame);
         setTitle("É triangulo?");
         setSize(800,600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

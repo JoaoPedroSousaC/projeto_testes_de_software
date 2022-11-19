@@ -19,8 +19,17 @@ public class SistemaFrame extends JFrame{
     public SistemaFrame (String name) {
         JFrame raizesFrame =  new RaizesFrame(this);
         JFrame ehTrianguloFrame =  new EhTrianguloFrame(this);
+        JFrame classificarTrianguloFrame =  new ClassificarTrianguloFrame(this);
+        JFrame ehTrianguloRetanguloFrame =  new EhTrianguloRetanguloFrame(this);
+        JFrame perimetroRetanguloFrame =  new PerimetroRetanguloFrame(this);
+        JFrame ehRetanguloFrame =  new EhRetanguloFrame(this);
         raizesFrame.setVisible(false);
         ehTrianguloFrame.setVisible(false);
+        classificarTrianguloFrame.setVisible(false);
+        ehTrianguloRetanguloFrame.setVisible(false);
+        perimetroRetanguloFrame.setVisible(false);
+        ehRetanguloFrame.setVisible(false);
+
         char newName[] = new char[name.length()];
         setContentPane(sistemaPanel);
         if (name.length() > 20) {
@@ -52,7 +61,6 @@ public class SistemaFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 raizesFrame.setVisible(true);
-
                 setVisible(false);
             }
         });
@@ -60,7 +68,34 @@ public class SistemaFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 ehTrianguloFrame.setVisible(true);
-
+                setVisible(false);
+            }
+        });
+        classificarTrianguloButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                classificarTrianguloFrame.setVisible(true);
+                setVisible(false);
+            }
+        });
+        ehTrianguloRetanguloButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ehTrianguloRetanguloFrame.setVisible(true);
+                setVisible(false);
+            }
+        });
+        calcularAreaEPerimetroRetanguloButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                perimetroRetanguloFrame.setVisible(true);
+                setVisible(false);
+            }
+        });
+        ehUmRetanguloButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ehRetanguloFrame.setVisible(true);
                 setVisible(false);
             }
         });

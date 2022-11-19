@@ -32,7 +32,7 @@ public class Sistema implements FuncionalidadesIF {
   }
 
   public boolean ehTrianguloRetangulo(double lado1, double lado2, double lado3) {
-
+    if(((lado1 == 90)||(lado2 == 90) || (lado3 == 90)) && ehTriangulo(lado1,lado2,lado3)) return true;
     if ((Math.pow(lado1, 2) + Math.pow(lado2, 2) == Math.pow(lado3, 2))
         || (Math.pow(lado3, 2) + Math.pow(lado2, 2) == Math.pow(lado1, 2))
         || (Math.pow(lado1, 2) + Math.pow(lado3, 2) == Math.pow(lado2, 2)))
