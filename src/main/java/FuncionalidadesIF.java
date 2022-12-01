@@ -11,9 +11,9 @@ public interface FuncionalidadesIF {
 
   public boolean ehRetangulo(double lado1, double lado2, double lado3, double lado4) throws Exception;
 
-  public double perimetroRetangulo(double lado1, double lado2, double lado3, double lado4) throws Exception;
+  public double perimetroRetangulo(double lado1, double lado2) throws Exception;
 
-  public double areaRetangulo(double lado1, double lado2, double lado3, double lado4) throws Exception;
+  public double areaRetangulo(double lado1, double lado2) throws Exception;
 
   public double calculadora(String expressao);
 

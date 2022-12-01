@@ -66,6 +66,7 @@ public class Sistema implements FuncionalidadesIF {
     } else {
       throw new Exception("Erro não é possivel calcular a aréa pois os lados nao formam um retângulo");
     }
+
   }
 
   public double areaRetangulo(double lado1, double lado2) throws Exception {
@@ -108,5 +109,4 @@ public class Sistema implements FuncionalidadesIF {
     double distancia = Math.sqrt(diferençaX + diferençaY);
     return distancia;
   }
-
 }
