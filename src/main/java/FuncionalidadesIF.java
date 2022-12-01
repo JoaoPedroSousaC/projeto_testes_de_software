@@ -15,7 +15,7 @@ public interface FuncionalidadesIF {
 
   public double areaRetangulo(double lado1, double lado2) throws Exception;
 
-  public double calculadora(String expressao);
+  public double calculadora(String expressao) throws Exception;
 
   public double areaCirculo(double raio) throws Exception;
 

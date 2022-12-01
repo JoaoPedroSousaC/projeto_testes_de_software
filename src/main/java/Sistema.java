@@ -77,9 +77,45 @@ public class Sistema implements FuncionalidadesIF {
     }
   }
 
-  // FALTA FAZER CALCULADORA ---------------------------------
-  public double calculadora(String expressao) {
-    return 0;
+  public double calculadora(String expressao) throws Exception {
+
+    String[] op = expressao.trim().split("\\s+");
+
+    if (op[0].isEmpty() || op[2].isEmpty() || op[1].isEmpty()) {
+      throw new Exception("Erro não é possivel calcular pode haver um erro de digitação");
+    } else if (op.length != 3) {
+      throw new Exception("Erro a expressão não possui todos os elementos necessarios para calcular");
+    }
+
+    double resultado, valorUm = Double.parseDouble(op[0]), valorDois = Double.parseDouble(op[2]);
+    switch (op[1]) {
+      case "-":
+        resultado = valorUm - valorDois;
+        break;
+      case "+":
+        resultado = valorUm + valorDois;
+        break;
+      case "/":
+        if (valorDois != 0) {
+          resultado = valorUm / valorDois;
+        } else {
+          throw new Exception("Erro não é possivel divisão por zero!");
+        }
+        break;
+      case "**":
+        boolean aux = op[2].matches("-?[0-9]*"); // verifica se expoente é inteiro
+        if (valorDois < 0 && valorUm == 0 || !aux) {
+          throw new Exception("Erro não é possivel calcular a potencia com os valores informados!");
+        }
+        resultado = Math.pow(valorUm, valorDois);
+        break;
+      case "*":
+        resultado = valorUm * valorDois;
+        break;
+      default:
+        throw new Exception("Erro ao tentar calcular expressão!");
+    }
+    return resultado;
   }
 
   public double areaCirculo(double raio) throws Exception {
