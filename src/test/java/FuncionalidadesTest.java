@@ -1,6 +1,5 @@
 import org.junit.Assert;
 import org.junit.Test;
-import java.*;
 
 public class FuncionalidadesTest {
     @Test
@@ -89,8 +88,8 @@ public class FuncionalidadesTest {
     @Test
     public void perimetroCirculoTest() throws Exception {
         Sistema sistema = new Sistema();
-        Assert.assertEquals(31.4, sistema.areaPerimetro(5), 0.5);
-        Assert.assertEquals(25.12, sistema.areaPerimetro(4), 0.01);
+        Assert.assertEquals(31.4, sistema.perimetroCirculo(5), 0.5);
+        Assert.assertEquals(25.12, sistema.perimetroCirculo(4), 0.01);
         // Assert.assertEquals(0, sistema.areaPerimetro(0), 0.01);
     }
 

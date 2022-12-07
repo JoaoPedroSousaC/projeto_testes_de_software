@@ -45,7 +45,7 @@
         <properties>
           <font size="14" style="0"/>
           <foreground color="-1842205"/>
-          <text value="&lt;html&gt;Insira um lado a, b, c e d  e vamos dizer  &lt;br&gt;é qual o perímetro&lt;html&gt;"/>
+          <text value="&lt;html&gt;Insira as coordenadas x1 , y1, x2 e y2  e vamos dizer  &lt;br&gt;qual a distância entre os pontos&lt;html&gt;"/>
         </properties>
       </component>
       <component id="2290b" class="javax.swing.JLabel" binding="valorAText">
@@ -54,7 +54,7 @@
         </constraints>
         <properties>
           <foreground color="-1842205"/>
-          <text value="Valor de a:"/>
+          <text value="Valor de x1:"/>
         </properties>
       </component>
       <component id="da15b" class="javax.swing.JLabel" binding="valorBText">
@@ -63,7 +63,7 @@
         </constraints>
         <properties>
           <foreground color="-1842205"/>
-          <text value="Valor de b:"/>
+          <text value="Valor de y1:"/>
         </properties>
       </component>
       <component id="89876" class="javax.swing.JTextField" binding="valorAInput">
@@ -161,7 +161,7 @@
         </constraints>
         <properties>
           <foreground color="-1842205"/>
-          <text value="Valor de c:"/>
+          <text value="Valor de x2:"/>
         </properties>
       </component>
       <component id="8cd35" class="javax.swing.JTextField" binding="valorCInput">
@@ -218,7 +218,7 @@
         </constraints>
         <properties>
           <foreground color="-1842205"/>
-          <text value="Valor de d:"/>
+          <text value="Valor de y2:"/>
         </properties>
       </component>
     </children>

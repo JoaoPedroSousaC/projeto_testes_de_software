@@ -19,7 +19,7 @@ public interface FuncionalidadesIF {
 
   public double areaCirculo(double raio) throws Exception;
 
-  public double areaPerimetro(double raio) throws Exception;
+  public double perimetroCirculo(double raio) throws Exception;
 
   public double distanciaEntreDoisPontos(double x1, double y1, double x2, double y2);
 

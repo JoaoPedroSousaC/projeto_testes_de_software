@@ -48,22 +48,29 @@ public class EhRetanguloFrame extends JFrame{
                 double valorA = 0;
                 double valorB = 0;
                 double valorC = 0;
+                double valorD = 0;
                 try {
                     valorA = Double.parseDouble(valorAInput.getText());
                     valorB = Double.parseDouble(valorBInput.getText());
                     valorC = Double.parseDouble(valorCInput.getText());
-//                    if (valorAInput.getText() != "" && valorBInput.getText() != "" && valorCInput.getText() != ""){
-//                        Sistema sistema = new Sistema();
-//                        try {
-//                            resultadoText.setText(sistema.calculaFuncaoSegundoGrau(valorA,valorB,valorC));
-//                        } catch (Exception ex) {
-//                            throw new RuntimeException(ex);
-//                        }
-//                    } else {
-//                        resultadoText.setText("Valor inválido");
-//                    }
+                    valorD = Double.parseDouble(valorDInput.getText());
+                    if (valorAInput.getText() != "" && valorBInput.getText() != "" ){
+                        Sistema sistema = new Sistema();
+                        try {
+                            Boolean retangulo = sistema.ehRetangulo(valorA,valorB,valorC,valorD);
+                            if (retangulo) {
+                                resultadoText.setText("Sim");
+                            } else {
+                                resultadoText.setText("Não");
+                            }
+                        } catch (Exception ex) {
+                            throw new RuntimeException(ex.getMessage());
+                        }
+                    } else {
+                        resultadoText.setText("Valor inválido");
+                    }
                 } catch (Exception ex) {
-                    resultadoText.setText("Preencha os campos corretamente!!!");
+                    resultadoText.setText(ex.getMessage());
                 }
 
                 resultadoText.setSize(350,30);

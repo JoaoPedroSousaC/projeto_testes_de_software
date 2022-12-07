@@ -7,6 +7,7 @@ public class DistanciaDoisPontosFrame extends JFrame{
     private JButton voltarButton;
     private JTextField valorAInput;
     private JTextField valorBInput;
+    private JTextField valorDInput;
     private JLabel errorCText;
     private JLabel errorAText;
     private JButton calcularButton;
@@ -46,22 +47,24 @@ public class DistanciaDoisPontosFrame extends JFrame{
                 double valorA = 0;
                 double valorB = 0;
                 double valorC = 0;
+                double valorD = 0;
                 try {
                     valorA = Double.parseDouble(valorAInput.getText());
                     valorB = Double.parseDouble(valorBInput.getText());
                     valorC = Double.parseDouble(valorCInput.getText());
-//                    if (valorAInput.getText() != "" && valorBInput.getText() != "" && valorCInput.getText() != ""){
-//                        Sistema sistema = new Sistema();
-//                        try {
-//                            resultadoText.setText(sistema.calculaFuncaoSegundoGrau(valorA,valorB,valorC));
-//                        } catch (Exception ex) {
-//                            throw new RuntimeException(ex);
-//                        }
-//                    } else {
-//                        resultadoText.setText("Valor inválido");
-//                    }
+                    valorD = Double.parseDouble(valorDInput.getText());
+                    if (valorAInput.getText() != "" && valorBInput.getText() != "" && valorCInput.getText() != "" && valorDInput.getText() != ""){
+                        Sistema sistema = new Sistema();
+                        try {
+                            resultadoText.setText(Double.toString(sistema.distanciaEntreDoisPontos(valorA,valorB,valorC,valorD)));
+                        } catch (Exception ex) {
+                            throw new RuntimeException(ex.getMessage());
+                        }
+                    } else {
+                        resultadoText.setText("Valor inválido");
+                    }
                 } catch (Exception ex) {
-                    resultadoText.setText("Preencha os campos corretamente!!!");
+                    resultadoText.setText(ex.getMessage());
                 }
 
                 resultadoText.setSize(350,30);

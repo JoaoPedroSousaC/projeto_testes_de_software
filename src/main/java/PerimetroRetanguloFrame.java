@@ -14,7 +14,6 @@ public class PerimetroRetanguloFrame extends JFrame{
     private JTextField valorCInput;
     private JLabel valorAText;
     private JLabel valorBText;
-    private JLabel valorCText;
     private JLabel errorBText;
     private JPanel perimetroRetanguloFrame;
     private JTextField valorDInput;
@@ -38,8 +37,6 @@ public class PerimetroRetanguloFrame extends JFrame{
                 resultadoText.setText("Resultado ira aparecer aqui...");
                 valorAInput.setText("");
                 valorBInput.setText("");
-                valorCInput.setText("");
-                valorDInput.setText("");
             }
         });
         calcularButton.addActionListener(new ActionListener() {
@@ -47,23 +44,21 @@ public class PerimetroRetanguloFrame extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 double valorA = 0;
                 double valorB = 0;
-                double valorC = 0;
                 try {
                     valorA = Double.parseDouble(valorAInput.getText());
                     valorB = Double.parseDouble(valorBInput.getText());
-                    valorC = Double.parseDouble(valorCInput.getText());
-//                    if (valorAInput.getText() != "" && valorBInput.getText() != "" && valorCInput.getText() != ""){
-//                        Sistema sistema = new Sistema();
-//                        try {
-//                            resultadoText.setText(sistema.calculaFuncaoSegundoGrau(valorA,valorB,valorC));
-//                        } catch (Exception ex) {
-//                            throw new RuntimeException(ex);
-//                        }
-//                    } else {
-//                        resultadoText.setText("Valor inválido");
-//                    }
+                    if (valorAInput.getText() != "" && valorBInput.getText() != ""){
+                        Sistema sistema = new Sistema();
+                        try {
+                            resultadoText.setText("Perímetro: " + Double.toString(sistema.perimetroRetangulo(valorA,valorB)) + " Área: " + Double.toString(sistema.areaRetangulo(valorA,valorB)));
+                        } catch (Exception ex) {
+                            throw new RuntimeException(ex.getMessage());
+                        }
+                    } else {
+                        resultadoText.setText("Valor inválido");
+                    }
                 } catch (Exception ex) {
-                    resultadoText.setText("Preencha os campos corretamente!!!");
+                    resultadoText.setText(ex.getMessage());
                 }
 
                 resultadoText.setSize(350,30);

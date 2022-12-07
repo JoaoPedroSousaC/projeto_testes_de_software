@@ -23,12 +23,18 @@ public class SistemaFrame extends JFrame{
         JFrame ehTrianguloRetanguloFrame =  new EhTrianguloRetanguloFrame(this);
         JFrame perimetroRetanguloFrame =  new PerimetroRetanguloFrame(this);
         JFrame ehRetanguloFrame =  new EhRetanguloFrame(this);
+        JFrame perimetroCirculoFrame =  new PerimetroCirculoFrame(this);
+        JFrame distanciaDoisPontos =  new DistanciaDoisPontosFrame(this);
+        JFrame calculadora =  new CalculadoraFrame(this);
         raizesFrame.setVisible(false);
         ehTrianguloFrame.setVisible(false);
         classificarTrianguloFrame.setVisible(false);
         ehTrianguloRetanguloFrame.setVisible(false);
         perimetroRetanguloFrame.setVisible(false);
         ehRetanguloFrame.setVisible(false);
+        perimetroCirculoFrame.setVisible(false);
+        distanciaDoisPontos.setVisible(false);
+        calculadora.setVisible(false);
 
         char newName[] = new char[name.length()];
         setContentPane(sistemaPanel);
@@ -96,6 +102,27 @@ public class SistemaFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 ehRetanguloFrame.setVisible(true);
+                setVisible(false);
+            }
+        });
+        calcularAreaEPerimetroCirculoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                perimetroCirculoFrame.setVisible(true);
+                setVisible(false);
+            }
+        });
+        distanciaEntreDoisPontosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                distanciaDoisPontos.setVisible(true);
+                setVisible(false);
+            }
+        });
+        calculadoraButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculadora.setVisible(true);
                 setVisible(false);
             }
         });

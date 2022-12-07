@@ -129,7 +129,7 @@ public class Sistema implements FuncionalidadesIF {
 
   }
 
-  public double areaPerimetro(double raio) throws Exception {
+  public double perimetroCirculo(double raio) throws Exception {
     if (raio > 0) {
       double pi = 3.14;
       double perimetro = 2 * pi * raio;
