@@ -32,7 +32,7 @@ public class CalculadoraFrame extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 sistema.setVisible(true);
                 setVisible(false);
-                resultadoText.setText("Resultado ira aparecer aqui...");
+                resultadoText.setText("Resultado irá aparecer aqui...");
                 valorAInput.setText("");
             }
         });

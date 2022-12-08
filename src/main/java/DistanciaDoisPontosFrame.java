@@ -39,6 +39,7 @@ public class DistanciaDoisPontosFrame extends JFrame{
                 valorAInput.setText("");
                 valorBInput.setText("");
                 valorCInput.setText("");
+                valorDInput.setText("");
             }
         });
         calcularButton.addActionListener(new ActionListener() {

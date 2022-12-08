@@ -39,10 +39,11 @@ public class FuncionalidadesTest {
     @Test
     public void trianguloRetanguloTest() throws Exception {
         Sistema sistema = new Sistema();
-        Assert.assertTrue(sistema.ehTriangulo(20, 90, 70));
-        Assert.assertTrue(sistema.ehTriangulo(90, 45, 45));
-        Assert.assertFalse(sistema.ehTriangulo(90, 40, 45));
-        Assert.assertFalse(sistema.ehTriangulo(20, 100, 70));
+        Assert.assertFalse(sistema.ehTrianguloRetangulo(0, 0, 0));
+        Assert.assertTrue(sistema.ehTrianguloRetangulo(3, 4, 5));
+        Assert.assertTrue(sistema.ehTrianguloRetangulo(8, 15, 17));
+        Assert.assertFalse(sistema.ehTrianguloRetangulo(0, 4, 5));
+        Assert.assertFalse(sistema.ehTrianguloRetangulo(3, 4, 0));
     }
 
     @Test

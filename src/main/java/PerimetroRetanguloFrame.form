@@ -180,7 +180,7 @@
         <properties>
           <font size="14" style="0"/>
           <foreground color="-1842205"/>
-          <text value="&lt;html&gt;Insira um lado a, b, c e d  e vamos dizer  &lt;br&gt;é qual o perímetro e a área&lt;html&gt;"/>
+          <text value="&lt;html&gt;Insira um lado a e b, e vamos dizer  &lt;br&gt;é qual o perímetro e a área&lt;html&gt;"/>
         </properties>
       </component>
     </children>

@@ -32,8 +32,7 @@ public class Sistema implements FuncionalidadesIF {
   }
 
   public boolean ehTrianguloRetangulo(double lado1, double lado2, double lado3) throws Exception {
-    if (((lado1 == 90) || (lado2 == 90) || (lado3 == 90)) && ehTriangulo(lado1, lado2, lado3))
-      return true;
+    if(lado1 == 0 || lado2 == 0 || lado3 == 0) return false;
     if ((Math.pow(lado1, 2) + Math.pow(lado2, 2) == Math.pow(lado3, 2))
         || (Math.pow(lado3, 2) + Math.pow(lado2, 2) == Math.pow(lado1, 2))
         || (Math.pow(lado1, 2) + Math.pow(lado3, 2) == Math.pow(lado2, 2)))
@@ -81,10 +80,11 @@ public class Sistema implements FuncionalidadesIF {
 
     String[] op = expressao.trim().split("\\s+");
 
-    if (op[0].isEmpty() || op[2].isEmpty() || op[1].isEmpty()) {
-      throw new Exception("Erro não é possivel calcular pode haver um erro de digitação");
-    } else if (op.length != 3) {
+    if (op.length != 3) {
       throw new Exception("Erro a expressão não possui todos os elementos necessarios para calcular");
+    }
+    else if (op[0].isEmpty() || op[1].isEmpty() || op[2].isEmpty()) {
+      throw new Exception("Erro não é possivel calcular pode haver um erro de digitação");
     }
 
     double resultado, valorUm = Double.parseDouble(op[0]), valorDois = Double.parseDouble(op[2]);

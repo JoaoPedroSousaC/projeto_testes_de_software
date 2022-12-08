@@ -45,7 +45,7 @@
         <properties>
           <font size="14" style="0"/>
           <foreground color="-1842205"/>
-          <text value="&lt;html&gt;Insira um lado a, b, c e d  e vamos dizer  &lt;br&gt;se é um retângulo&lt;html&gt;"/>
+          <text value="&lt;html&gt;Insira um ângulo a, b, c e d  e vamos dizer  &lt;br&gt;se é um retângulo&lt;html&gt;"/>
         </properties>
       </component>
       <component id="2290b" class="javax.swing.JLabel" binding="valorAText">
